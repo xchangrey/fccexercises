@@ -6,13 +6,9 @@ let flattenedArr = [];
  
 function flatten(arr){
   for(let i = 0; i < arr.length; i++){
-    if(!Array.isArray(arr[i])){
-      flattenedArr.push(arr[i]);
-    } else {
-      flatten(arr[i]);
-    }
+      !Array.isArray(arr[i]) ? flattenedArr.push(arr[i]) : flatten(arr[i]);
   }
- }
+}
   
 flatten(arr);
   
