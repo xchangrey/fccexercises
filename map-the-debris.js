@@ -6,9 +6,7 @@ function orbitalPeriod(arr) {
   let firstOp = 2 * Math.PI;
   let newArr = [];
  
-  let getOrbitalPeriod = function(avgAlt, GM, earthRadius) {
-    return Math.round(firstOp * Math.sqrt(Math.pow(avgAlt + earthRadius, 3) / GM));
-  };
+  let getOrbitalPeriod = (avgAlt, GM, earthRadius) => Math.round(firstOp * Math.sqrt(Math.pow(avgAlt + earthRadius, 3) / GM));
   
   arr.forEach(el => newArr.push({
     name: el.name,
